@@ -20,7 +20,11 @@
       "Bash(curl -s -o /dev/null -w \"port 3000 now: %{http_code}\\\\n\" --max-time 3 http://localhost:3000/)",
       "Bash(netstat -ltnp)",
       "Bash(ps -eo pid,ppid,cmd)",
-      "Bash(kill 232734 232733)"
+      "Bash(kill 232734 232733)",
+      "Bash(node -e \"console.log\\('next', require\\('next/package.json'\\).version\\)\")",
+      "Bash(npm view *)",
+      "Bash(npm audit *)",
+      "Bash(node -e \"console.log\\('postcss', require\\('postcss/package.json'\\).version\\)\")"
     ]
   }
 }
