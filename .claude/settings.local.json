@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx --version)",
+      "Bash(timeout 8 npm ping)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npm start *)",
+      "Bash(pkill -f \"next-server\")",
+      "Bash(pkill -f \"next start\")",
+      "Bash(node -e \"try{require.resolve\\('playwright'\\);console.log\\('playwright module: yes'\\)}catch\\(e\\){try{require.resolve\\('puppeteer'\\);console.log\\('puppeteer: yes'\\)}catch\\(e2\\){console.log\\('no headless browser installed'\\)}}\")",
+      "Bash(curl -s -o /dev/null http://localhost:3000/)",
+      "Bash(break)",
+      "Bash(node /tmp/claude-1000/-mnt-c-Users-Wilso-cleaning/f72562c7-d90b-4625-a81b-f15d82674e56/scratchpad/mobile-check.mjs)",
+      "Bash(node /mnt/c/Users/Wilso/cleaning/_mobile-check.mjs)",
+      "Bash(npm uninstall *)",
+      "Bash(node -e \"console.log\\(Object.keys\\(require\\('./package.json'\\).devDependencies\\).join\\(', '\\)\\)\")",
+      "Bash(fuser -k 3000/tcp)",
+      "Bash(curl -s -o /dev/null -w \"port 3000 now: %{http_code}\\\\n\" --max-time 3 http://localhost:3000/)",
+      "Bash(netstat -ltnp)",
+      "Bash(ps -eo pid,ppid,cmd)",
+      "Bash(kill 232734 232733)"
+    ]
+  }
+}
