@@ -26,6 +26,7 @@ export default function Header() {
         </Link>
 
         <button
+          type="button"
           className="nav__toggle"
           aria-label="Toggle menu"
           aria-expanded={open}
