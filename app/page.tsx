@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import { services, site } from "@/lib/site";
 import { ArtInterior } from "@/components/Art";
 import Cta from "@/components/Cta";
@@ -103,6 +104,21 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ===== TEST: TeeLink booking widget — remove this whole block when done ===== */}
+      <section className="section--tight" id="widget-test">
+        <div className="container">
+          <div data-teelink-widget />
+        </div>
+      </section>
+      <Script
+        src="https://teetime-ivory.vercel.app/widget.js"
+        data-api-base="https://teetime-ivory.vercel.app/api/widget/cmqznfzvj0005fa5goldbkh11"
+        data-course-id="cmqznfzvj0005fa5goldbkh11"
+        data-theme="light"
+        strategy="afterInteractive"
+      />
+      {/* ===== END TEST widget ===== */}
 
       {/* TRUST STRIP */}
       <div className="strip">
