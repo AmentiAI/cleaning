@@ -139,7 +139,6 @@ p  { margin: 0 0 1rem; }
 }
 .brand:hover .brand__logo { transform: scale(1.04); }
 .brand__logo--footer { height: 84px; }
-@media (max-width: 560px) { .brand__logo { height: 54px; } }
 .brand__mark {
   width: 42px; height: 42px; border-radius: 11px; flex: none;
   display: grid; place-items: center;
@@ -158,6 +157,14 @@ p  { margin: 0 0 1rem; }
 }
 .nav__links a:hover { color: var(--ink); background: var(--slate-100); }
 .nav__links a.active { color: var(--accent-ink); }
+/* The generic nav-link rules above (higher specificity than .btn--brand) would
+   otherwise override the Free Quote button's white text and blue gradient —
+   restore both, including on hover. */
+.nav__links .btn--brand,
+.nav__links .btn--brand:hover {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+}
 .nav__cta { margin-left: 12px; }
 
 .nav__toggle {
@@ -167,7 +174,9 @@ p  { margin: 0 0 1rem; }
 .nav__toggle svg { width: 28px; height: 28px; }
 
 @media (max-width: 900px) {
-  .nav__cta { display: none; }
+  /* Keep the Free Quote CTA in the mobile menu — it's the primary action and
+     matters even more on phones. It drops to the bottom as a full-width button. */
+  .nav__cta { margin-left: 0; }
   .nav__toggle { display: block; }
   .nav__links {
     /* absolute (not fixed) so the header's backdrop-filter can't hijack the
@@ -768,6 +777,14 @@ p  { margin: 0 0 1rem; }
 /* Phones */
 @media (max-width: 560px) {
   .container { padding: 0 18px; }
+
+  /* Reclaim vertical space: shorter sticky bar, and the menu/anchor offsets
+     follow it so dropdown height and #anchor scroll stay correct. */
+  .nav { height: 68px; }
+  .brand__logo { height: 48px; }
+  .brand__logo--footer { height: 64px; }
+  .nav__links { max-height: calc(100vh - 68px); }
+  section[id], article[id] { scroll-margin-top: 80px; }
 
   /* Comfortable, full-width primary actions that are easy to tap */
   .hero__actions,

@@ -67,7 +67,8 @@
       "Bash(awk '{print $9, $5, \"bytes\"}')",
       "Bash(xxd)",
       "Bash(python3 -c ' *)",
-      "Bash(sed -i 's/color: var\\(--navy-900\\)/color: #fff/g' app/globals.css)"
+      "Bash(sed -i 's/color: var\\(--navy-900\\)/color: #fff/g' app/globals.css)",
+      "Bash(grep -nA3 \"^\\\\.btn--brand {\" app/globals.css)"
     ]
   }
 }
