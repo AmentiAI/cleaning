@@ -19,7 +19,7 @@ export default function Cta({
       <h2>{title}</h2>
       <p>{text}</p>
       <div className="cta__actions">
-        <Link className="btn btn--gold btn--lg" href={primaryHref}>
+        <Link className="btn btn--brand btn--lg" href={primaryHref}>
           {primaryLabel}
         </Link>
         {secondary &&

@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { site, nav } from "@/lib/site";
-import { LeafMark, Menu } from "@/components/Icons";
+import { Menu } from "@/components/Icons";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -13,16 +14,20 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container nav">
+        {/* The logo already carries the wordmark and tagline, so it stands alone
+            here rather than being repeated as text beside itself. */}
         <Link className="brand" href="/" aria-label={`${site.name} home`}>
-          <span className="brand__mark" aria-hidden="true">
-            <LeafMark />
-          </span>
-          <span>
-            <span className="brand__name">
-              O&apos;Neil<span> Cleaning</span>
-            </span>
-            <span className="brand__tag">{site.tagline}</span>
-          </span>
+          <Image
+            className="brand__logo"
+            src="/logo.png"
+            alt={`${site.name} — ${site.tagline}`}
+            width={1133}
+            height={876}
+            // Displayed ~85px wide, so cap the srcset rather than shipping the
+            // full-size render for an 86px-tall bar.
+            sizes="(max-width: 560px) 70px, 90px"
+            priority
+          />
         </Link>
 
         <button
@@ -55,7 +60,7 @@ export default function Header() {
             );
           })}
           <li className="nav__cta">
-            <Link className="btn btn--gold" href="/contact" onClick={() => setOpen(false)}>
+            <Link className="btn btn--brand" href="/contact" onClick={() => setOpen(false)}>
               Free Quote
             </Link>
           </li>

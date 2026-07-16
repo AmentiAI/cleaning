@@ -7,7 +7,7 @@ import { Phone, Mail, Pin, Clock } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Contact & Free Quote",
   description:
-    "Get a free, no-obligation cleaning quote from O'Neil Cleaning. Call, email, or fill out the form and we'll get back to you within one business day.",
+    "Get a free, no-obligation cleaning quote from O'Neill Cleaning. Call, email, or fill out the form and we'll get back to you within one business day.",
 };
 
 export default function ContactPage() {
@@ -66,7 +66,7 @@ export default function ContactPage() {
               <p style={{ margin: "0 0 16px", color: "var(--slate-300)" }}>
                 Call us now and we&apos;ll often quote you on the spot.
               </p>
-              <a className="btn btn--gold" href={site.phoneHref}>
+              <a className="btn btn--brand" href={site.phoneHref}>
                 Call {site.phoneDisplay}
               </a>
             </div>

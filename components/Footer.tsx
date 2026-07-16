@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/lib/site";
-import { LeafMarkSolid, Facebook, Instagram, Google } from "@/components/Icons";
+import { Facebook, Instagram, Google } from "@/components/Icons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,15 +10,15 @@ export default function Footer() {
       <div className="container">
         <div className="footer__grid">
           <div className="footer__brand">
-            <Link className="brand" href="/">
-              <span className="brand__mark" aria-hidden="true">
-                <LeafMarkSolid />
-              </span>
-              <span>
-                <span className="brand__name">
-                  O&apos;Neil<span> Cleaning</span>
-                </span>
-              </span>
+            <Link className="brand" href="/" aria-label={`${site.name} home`}>
+              <Image
+                className="brand__logo brand__logo--footer"
+                src="/logo.png"
+                alt={`${site.name} — ${site.tagline}`}
+                width={1133}
+                height={876}
+                sizes="110px"
+              />
             </Link>
             <p>
               Premium residential &amp; commercial cleaning you can count on — insured,

@@ -8,7 +8,7 @@ import { ShieldCheck, Sparkle, Heart, Clock, Dollar, Calendar, Star } from "@/co
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn the story behind O'Neil Cleaning — a family-run team of vetted, insured cleaning professionals dedicated to spotless spaces and honest service.",
+    "Learn the story behind O'Neill Cleaning — a family-run team of vetted, insured cleaning professionals dedicated to spotless spaces and honest service.",
 };
 
 const values = [
@@ -58,7 +58,7 @@ export default function AboutPage() {
       <PageHero
         crumb="About"
         title="The team behind the shine"
-        text="O'Neil Cleaning was built on a simple belief: everyone deserves a clean space and honest, dependable service."
+        text="O'Neill Cleaning was built on a simple belief: everyone deserves a clean space and honest, dependable service."
       />
 
       {/* STORY */}
@@ -68,7 +68,7 @@ export default function AboutPage() {
             <span className="eyebrow">Our story</span>
             <h2>Family-founded, community-trusted</h2>
             <p>
-              O&apos;Neil Cleaning started over a decade ago with one van, a bucket, and a
+              O&apos;Neill Cleaning started over a decade ago with one van, a bucket, and a
               promise to treat every home like our own. What began as a small family operation
               has grown into a trusted local team — but our standards haven&apos;t changed one bit.
             </p>
@@ -79,7 +79,7 @@ export default function AboutPage() {
             </p>
             <p>
               Today we serve hundreds of homes and businesses, and we still answer every call
-              ourselves. When you book O&apos;Neil, you&apos;re not a ticket number — you&apos;re
+              ourselves. When you book O&apos;Neill, you&apos;re not a ticket number — you&apos;re
               part of the family.
             </p>
             <Link className="btn btn--dark" href="/contact" style={{ marginTop: 6 }}>
@@ -134,7 +134,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <div className="section-head reveal">
-            <span className="eyebrow">The O&apos;Neil difference</span>
+            <span className="eyebrow">The O&apos;Neill difference</span>
             <h2>Why clients stay with us</h2>
             <p>It&apos;s not just about clean — it&apos;s about how effortless and dependable we make it.</p>
           </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
         <div className="container">
           <Cta
             title="Let's make your space shine"
-            text="Join hundreds of happy homes and businesses who trust O'Neil Cleaning."
+            text="Join hundreds of happy homes and businesses who trust O'Neill Cleaning."
             secondary={{ label: "See Our Services", href: "/services" }}
           />
         </div>

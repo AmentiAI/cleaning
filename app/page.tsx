@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Script from "next/script";
 import { services, site } from "@/lib/site";
 import { ArtInterior } from "@/components/Art";
+import BeforeAfter from "@/components/BeforeAfter";
 import Cta from "@/components/Cta";
 import {
   Check,
@@ -43,13 +43,13 @@ const testimonials = [
     initials: "SM",
     name: "Sarah M.",
     role: "Residential client",
-    text: "O'Neil transformed our home. The team is punctual, thorough, and genuinely lovely. I finally get my weekends back!",
+    text: "O'Neill transformed our home. The team is punctual, thorough, and genuinely lovely. I finally get my weekends back!",
   },
   {
     initials: "JT",
     name: "James T.",
     role: "Office manager",
-    text: "We switched our office cleaning to O'Neil and never looked back. Reliable, professional, and always spotless.",
+    text: "We switched our office cleaning to O'Neill and never looked back. Reliable, professional, and always spotless.",
   },
   {
     initials: "AL",
@@ -71,12 +71,12 @@ export default function HomePage() {
               A spotless space, <em>without the effort.</em>
             </h1>
             <p className="hero__sub">
-              O&apos;Neil Cleaning brings premium, reliable cleaning to homes and businesses —
+              O&apos;Neill Cleaning brings premium, reliable cleaning to homes and businesses —
               from weekly upkeep to top-to-bottom deep cleans. Insured, background-checked, and
               100% satisfaction guaranteed.
             </p>
             <div className="hero__actions">
-              <Link className="btn btn--gold btn--lg" href="/contact">
+              <Link className="btn btn--brand btn--lg" href="/contact">
                 Get Your Free Quote
               </Link>
               <Link className="btn btn--outline btn--lg" href="/services">
@@ -105,30 +105,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== TEST: TeeLink booking widget — remove this whole block when done ===== */}
-      <section className="section--tight" id="widget-test">
-        <div className="container">
-          <div data-teelink-widget />
-        </div>
-      </section>
-      <Script
-        src="https://teetime-ivory.vercel.app/widget.js"
-        data-api-base="https://teetime-ivory.vercel.app/api/widget/cmqznfzvj0005fa5goldbkh11"
-        data-course-id="cmqznfzvj0005fa5goldbkh11"
-        data-theme="light"
-        strategy="afterInteractive"
-      />
-      {/* ===== END TEST widget ===== */}
-
       {/* TRUST STRIP */}
       <div className="strip">
-        <div className="container strip__row">
-          <span><Shield /> Licensed &amp; Insured</span>
-          <span><Dollar /> Upfront, Honest Pricing</span>
-          <span><Clock /> On-Time, Every Time</span>
-          <span><Star /> 5-Star Rated Locally</span>
+        <div className="strip__marquee">
+          <div className="strip__track">
+            {[0, 1].map((dup) => (
+              <div className="strip__row" key={dup} aria-hidden={dup === 1}>
+                <span><Shield /> Licensed &amp; Insured</span>
+                <span><Dollar /> Upfront, Honest Pricing</span>
+                <span><Clock /> On-Time, Every Time</span>
+                <span><Star /> 5-Star Rated Locally</span>
+                <span><ShieldCheck /> Background-Checked Teams</span>
+                <span><Heart /> Eco-Friendly Products</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* BEFORE / AFTER */}
+      <section className="section showcase" id="results">
+        <div className="container">
+          <div className="section-head section-head--light reveal">
+            <span className="eyebrow eyebrow--light">Real results</span>
+            <h2>See the <em>difference</em> for yourself</h2>
+            <p>
+              Every clean tells its own story. Drag the slider on any job below to watch
+              the transformation happen.
+            </p>
+          </div>
+          <div className="reveal">
+            <BeforeAfter />
+          </div>
+        </div>
+      </section>
 
       {/* SERVICES */}
       <section className="section">
@@ -167,7 +177,7 @@ export default function HomePage() {
       >
         <div className="container split">
           <div className="reveal">
-            <span className="eyebrow">Why O&apos;Neil</span>
+            <span className="eyebrow">Why O&apos;Neill</span>
             <h2>Cleaning you can genuinely rely on</h2>
             <p className="lead">
               We treat every home and business like our own. That means consistent teams,

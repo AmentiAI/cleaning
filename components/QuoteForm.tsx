@@ -91,7 +91,7 @@ export default function QuoteForm() {
           />
         </div>
 
-        <button type="submit" className="btn btn--gold btn--lg btn--block">
+        <button type="submit" className="btn btn--brand btn--lg btn--block">
           Send My Free Quote Request
         </button>
         <p className="form-note">

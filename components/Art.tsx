@@ -48,5 +48,5 @@ export const ArtWindows = () => (
   <Photo src="/images/windows.jpg" alt="Cleaning a window to a streak-free shine" />
 );
 export const ArtTeam = () => (
-  <Photo src="/images/team.jpg" alt="O'Neil Cleaning professional with equipment at the service van" />
+  <Photo src="/images/team.jpg" alt="O'Neill Cleaning professional with equipment at the service van" />
 );

@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Explore O'Neil Cleaning services: residential, commercial, deep cleaning, move in/out, carpet & upholstery, and window & specialty cleaning. Book a free quote.",
+    "Explore O'Neill Cleaning services: residential, commercial, deep cleaning, move in/out, carpet & upholstery, and window & specialty cleaning. Book a free quote.",
 };
 
 const art: Record<string, () => React.ReactElement> = {

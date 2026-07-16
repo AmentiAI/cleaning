@@ -8,39 +8,33 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#0b1220",
+  themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://oneilcleaning.com"),
+  metadataBase: new URL("https://oneillcleaning.com"),
   title: {
-    default: "O'Neil Cleaning — Premium Residential & Commercial Cleaning",
-    template: "%s — O'Neil Cleaning",
+    default: "O'Neill Cleaning — Premium Residential & Commercial Cleaning",
+    template: "%s — O'Neill Cleaning",
   },
   description:
-    "O'Neil Cleaning delivers spotless, dependable residential and commercial cleaning. Deep cleans, move in/out, carpet & specialty services. Book your free quote today.",
+    "O'Neill Cleaning delivers spotless, dependable residential and commercial cleaning. Deep cleans, move in/out, carpet & specialty services. Book your free quote today.",
   keywords: [
     "cleaning service",
     "house cleaning",
     "commercial cleaning",
     "deep cleaning",
     "move out cleaning",
-    "O'Neil Cleaning",
+    "O'Neill Cleaning",
   ],
   openGraph: {
-    title: "O'Neil Cleaning — Premium Residential & Commercial Cleaning",
+    title: "O'Neill Cleaning — Premium Residential & Commercial Cleaning",
     description:
       "Spotless, dependable cleaning for homes and businesses. Insured, background-checked, 100% satisfaction guaranteed.",
     type: "website",
   },
-  icons: {
-    icon: [
-      {
-        url:
-          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23d4af37'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='%230b1220' font-family='Georgia' font-weight='bold'%3EO%3C/text%3E%3C/svg%3E",
-      },
-    ],
-  },
+  // Icons come from app/favicon.ico, app/icon.png and app/apple-icon.png via
+  // the App Router file convention — declaring them here too would override those.
 };
 
 export default function RootLayout({

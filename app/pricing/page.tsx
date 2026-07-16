@@ -8,7 +8,7 @@ import { CheckThin } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent, upfront cleaning prices from O'Neil Cleaning. Choose Essential, Signature, or Premium plans, or request a custom quote for your home or business.",
+    "Transparent, upfront cleaning prices from O'Neill Cleaning. Choose Essential, Signature, or Premium plans, or request a custom quote for your home or business.",
 };
 
 const tiers = [
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: "Are you insured?",
-    a: "Absolutely. O'Neil Cleaning is fully licensed, bonded, and insured, and every cleaner is background-checked and trained.",
+    a: "Absolutely. O'Neill Cleaning is fully licensed, bonded, and insured, and every cleaner is background-checked and trained.",
   },
 ];
 
@@ -108,7 +108,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link className={`btn ${t.featured ? "btn--gold" : "btn--ghost"}`} href="/contact">
+                <Link className={`btn ${t.featured ? "btn--brand" : "btn--ghost"}`} href="/contact">
                   {t.cta}
                 </Link>
               </div>
@@ -157,7 +157,7 @@ export default function PricingPage() {
                 If you&apos;re not thrilled with any area of your clean, let us know within 24 hours
                 and we&apos;ll return to re-clean it — completely free. No quibbles, no extra cost.
               </p>
-              <Link className="btn btn--gold" href="/contact">
+              <Link className="btn btn--brand" href="/contact">
                 Book with confidence
               </Link>
             </div>

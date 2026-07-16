@@ -1,10 +1,11 @@
 // Central business details — edit these once and they update across the whole site.
 export const site = {
-  name: "O'Neil Cleaning",
-  tagline: "Premium Clean · Every Time",
+  name: "O'Neill Cleaning",
+  // Matches the tagline set into the logo artwork.
+  tagline: "Clean Spaces. Better Places.",
   phoneDisplay: "(555) 123-4567",
   phoneHref: "tel:+15551234567",
-  email: "hello@oneilcleaning.com",
+  email: "hello@oneillcleaning.com",
   hours: "Mon–Sat, 8:00am – 6:00pm",
   area: "Your City & surrounding suburbs",
 };
